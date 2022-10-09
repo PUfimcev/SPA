@@ -52,7 +52,7 @@ h1 {
 }
 
 .header__nav ul a {
-    color: blue;
+    color: rgb(8, 11, 53);
     text-decoration: none;
     cursor: pointer;
 }
@@ -149,7 +149,7 @@ h1 {
 
 .catalog__item .title a {
     text-decoration: none;
-    color: blue;
+    color: rgb(14, 20, 96);
 }
 
 .catalog__item .price {
