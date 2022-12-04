@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/PUfimcev/SPA/issues"
   },
-  "homepage": "https://github.com/PUfimcev/SPA#readme",
+  "homepage": "https://github.com/PUfimcev/SPA",
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
