@@ -1,4 +1,4 @@
-import Img1 from '../images/store-logo.jpeg';
+import Img1 from '../assets/store-logo.jpeg';
 
 class Header {
     create() {

@@ -1,6 +1,6 @@
 import { getData } from '../../components/App'; 
 
-import Img2 from '../../images/shopping-cart.png';
+import Img2 from '../../assets/shopping-cart.png';
 
 class Cart {
     add(id) {

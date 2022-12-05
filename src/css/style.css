@@ -89,13 +89,13 @@ h1 {
 
 .home {
     height: 100%;
-    /* color: #fff; */
+    color: #fff;
 }
 
 .home .container {
     padding: 40px 40px;
     height: 80vh;
-    background: url('../images/internet-magazino_main.jpeg');
+    background: url('../assets/internet-magazino_main.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
    
@@ -173,7 +173,7 @@ h1 {
 .contact .container {
     padding: 40px 40px;
     height: 70vh;
-    background-image: linear-gradient(rgba(255, 255 , 255, 0.5), rgba(0, 0 , 0, 0.7)), url('../images/nternet_magazinov.jpeg');
+    background-image: linear-gradient(rgba(255, 255 , 255, 0.5), rgba(0, 0 , 0, 0.7)), url('../assets/nternet_magazinov.jpeg');
     background-repeat: no-repeat;
     background-size: 100%;
 }

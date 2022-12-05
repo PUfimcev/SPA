@@ -1,6 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -10,19 +10,18 @@ module.exports = {
     output: {
         filename: "[name].js",
         chunkFilename: '[name].js',
-        path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'images/[name][ext]'
+        path: path.resolve(__dirname, 'build'),
+        assetModuleFilename: 'images/[hash][ext][query]'
     },
-    mode: 'development',
     plugins: [
         new HTMLWebpackPlugin({
             template: './src/index.html'
         }),
         new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin()
+        // new MiniCssExtractPlugin()
     ],
     devServer: {
-        port: 4200
+        port: 3200
     },
     optimization: {
         splitChunks: {
@@ -31,21 +30,30 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.css$/i,
-                use: ['style-loader',
-                MiniCssExtractPlugin.loader, 'css-loader']
-            },
+            // {
+            //     test: /\.css$/i,
+            //     use: [ MiniCssExtractPlugin.loader, 'css-loader'],
+            // },
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                include: path.join(__dirname, '/images'),
-                type: 'asset/resource',
-                use: [{loader: 'file-loader'}]
-            }
+                type: 'asset/resource'
+            },
+            // {
+            //     test: /\.(png|jpe?g|gif)$/i,
+            //    dependency: { not: ['url'] },
+            //     use: [
+            //       {
+            //         loader: 'url-loader',
+            //         options: {
+            //           limit: 8192,
+            //         },
+            //       },
+            //     ],
+            //   },
         ]
     }
 }
